@@ -1,0 +1,24 @@
+{
+  "name": "zeichiku",
+  "version": "0.1.0",
+  "description": "talk subject random chooser for streamers",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TearTheSky/zeichiku.git"
+  },
+  "keywords": [
+    "utilities",
+    "tools",
+    "streamers"
+  ],
+  "author": "TearTheSky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TearTheSky/zeichiku/issues"
+  },
+  "homepage": "https://github.com/TearTheSky/zeichiku#readme"
+}
