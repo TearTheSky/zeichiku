@@ -14,14 +14,16 @@
             </button>
     </div>
     <div class="talking">
-        <h1>トーク中のお題</h1>
-        <p id='talkingNow'></p>
-    <button type=button name="finish_button" onclick="alert('button要素は、この使用例のようにスクリプトと組み合わせて利用されることが多いようです。')">
+        <h1>選択中のお題</h1>
+        <p id="talkingNow"></p>
+    <button type=button name="finish_button" onclick="finishSubject();">
             おしまい 👍
         </button>
     </div>
     <div class="finished">
         <h1>消化済み</h1>
+        <div id="finishedSubjectList">
+        </div>
     </div>
     <div class=inputBox>
         <h1>お題登録</h1>
