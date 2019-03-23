@@ -9,19 +9,20 @@
 <body>
     <div class="subjects">
             <h1>お題一覧</h1>
+            <p>お題をクリックすると選択できるよ</p>
             <form id="subjectForm">
                 <ul id="subjectList">
                 </ul>
             </form>
             <button type=button name="decide_button" onclick="decideSubject();">
-                これにする 👌
+                これにする
             </button>
     </div>
     <div class="talking">
         <h1>選択中のお題</h1>
         <p id="talkingNow"></p>
     <button type=button name="finish_button" onclick="finishSubject();">
-            おしまい 👏
+            おしまい
         </button>
     </div>
     <div class="finished">
@@ -31,8 +32,8 @@
     </div>
     <div class=inputBox>
         <h1>お題登録</h1>
-        <input id="register" type="text"
-          placeholder="お題を入力してエンターキーで登録 👍"
+        <input type="text" class="textbox" id="register" size=80
+          placeholder="お題を入力してエンターキーで登録"
           onkeypress="pressEnterKey();">
     </div>
     <script src="subject.js"></script>
