@@ -9,7 +9,6 @@ function addSubject(){
         return
     } else {
         talkingNow = document.getElementById('talkingNow');
-        window.alert("お題を登録します：" + register.value);
     }
     //<li>タグを追加しここにラジオボタンを入れる
     newSubjectSelectButtonPlace = document.createElement("li");
@@ -41,6 +40,12 @@ function decideSubject(){
     talkingNow = document.getElementById('talkingNow');
     element = document.getElementById('subjectForm');
 
+    var radioButtons = document.getElementsByName("registeredSubjects");
+    if(radioButtons.length === 0){
+        window.alert("話題が1個も登録されていません");
+        return;
+    }
+
     if(talkingNow.innerHTML){
         window.alert("選択中の話題を先に終わらせてください");
         return;
@@ -69,18 +74,22 @@ function decideSubject(){
 
 function randamChooseSubject(){
     talkingNow = document.getElementById('talkingNow');
+    existSubjects = [];
+    var radioButtons = document.getElementsByName("registeredSubjects");
+
+    if(radioButtons.length === 0){
+        window.alert("話題が1個も登録されていません");
+        return;
+    }
+
     if(talkingNow.innerHTML){
         window.alert("選択中の話題を先に終わらせてください");
         return;
     }
-    existSubjects = [];
-    var radioButtons = document.getElementsByTagName("input");
 
     for (var i=0; i < radioButtons.length; i++) {
-        window.alert(radioButtons[i].value);
         existSubjects.push(radioButtons[i].value);
     }
-    window.alert(existSubjects);
     choseSubject = existSubjects[ Math.floor( Math.random() * existSubjects.length ) ];
     window.alert('選ばれたのは ' + choseSubject + ' でした');
     // 選ばれた話題を登録
