@@ -41,6 +41,11 @@ function decideSubject(){
     talkingNow = document.getElementById('talkingNow');
     element = document.getElementById('subjectForm');
 
+    if(talkingNow.innerHTML){
+        window.alert("選択中の話題を先に終わらせてください");
+        return;
+    }
+
     if (element.registeredSubjects === undefined){
         window.alert("お題はまだ選択されていないようです。\n登録しましたか？");
         return;
@@ -64,6 +69,10 @@ function decideSubject(){
 
 function randamChooseSubject(){
     talkingNow = document.getElementById('talkingNow');
+    if(talkingNow.innerHTML){
+        window.alert("選択中の話題を先に終わらせてください");
+        return;
+    }
     existSubjects = [];
     var radioButtons = document.getElementsByTagName("input");
 
