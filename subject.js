@@ -8,29 +8,34 @@ function addSubject(){
     talkingNow = document.getElementById('talkingNow');
     window.alert("お題を登録します：" + register.value);
 
+    newSubjectSelectButtonPlace = document.createElement("div");
+    newSubjectSelectButtonPlaceId = "part-of-" + register.value;
+    newSubjectSelectButtonPlace.setAttribute('id', newSubjectSelectButtonPlaceId);
+    document.getElementById('subjectList').appendChild(newSubjectSelectButtonPlace);
+
     newSubjectSelectButton = document.createElement("input");
     newSubjectSelectButton.setAttribute('type', 'radio');
     newSubjectSelectButton.setAttribute('name', 'registeredSubjects');
     newSubjectSelectButton.value = register.value;
-    document.getElementById('subjectList').appendChild(newSubjectSelectButton);
+    document.getElementById(newSubjectSelectButtonPlaceId).appendChild(newSubjectSelectButton);
 
     newSubjectTitle = document.createTextNode(register.value);
-    document.getElementById('subjectList').appendChild(newSubjectTitle);
+    document.getElementById(newSubjectSelectButtonPlaceId).appendChild(newSubjectTitle);
     newLineBrake = document.createElement("br");
-    document.getElementById('subjectList').appendChild(newLineBrake);
+    document.getElementById(newSubjectSelectButtonPlaceId).appendChild(newLineBrake);
     register.value = '';
 }
 
 function decideSubject(){
     talkingNow = document.getElementById('talkingNow');
+    element = document.getElementById('subjectList');
 
-    var element = document.getElementById('subjectList');
-    var radioNodeList = element.registeredSubjects;
-
-    if (radioNodeList.value === undefined){
-
+    if (element.registeredSubjects === undefined){
+        window.alert("お題はまだ選択されていないようです。\n登録しましたか？");
+        return;
     } else {
-        var choseSubject = radioNodeList.value;
+        radioNodeList = element.registeredSubjects;
+        choseSubject = radioNodeList.value;
     }
 
     if ( choseSubject === "" ) {
@@ -39,6 +44,9 @@ function decideSubject(){
     } else {
     	// aには選択状態の値が代入されている
         talkingNow.innerHTML = choseSubject;
+        choseSubjectParentId = 'part-of-' + choseSubject
+        choseSubjectParent = document.getElementById(choseSubjectParentId);
+        choseSubjectParent.parentNode.removeChild(choseSubjectParent);
     }
 
 }
