@@ -55,7 +55,7 @@ function decideSubject(){
     } else {
     	// aには選択状態の値が代入されている
         talkingNow.innerHTML = choseSubject;
-        choseSubjectParentId = 'li-id-of-' + choseSubject
+        choseSubjectParentId = 'li-id-of-' + choseSubject;
         choseSubjectParent = document.getElementById(choseSubjectParentId);
         choseSubjectParent.parentNode.removeChild(choseSubjectParent);
     }
@@ -63,7 +63,8 @@ function decideSubject(){
 }
 
 function randamChooseSubject(){
-    existSubjects = new Array();
+    talkingNow = document.getElementById('talkingNow');
+    existSubjects = [];
     var radioButtons = document.getElementsByTagName("input");
 
     for (var i=0; i < radioButtons.length; i++) {
@@ -71,9 +72,13 @@ function randamChooseSubject(){
         existSubjects.push(radioButtons[i].value);
     }
     window.alert(existSubjects);
-    choseOne = existSubjects[ Math.floor( Math.random() * existSubjects.length ) ];
-    window.alert('選ばれたのは ' + choseOne + ' でした');
-
+    choseSubject = existSubjects[ Math.floor( Math.random() * existSubjects.length ) ];
+    window.alert('選ばれたのは ' + choseSubject + ' でした');
+    // 選ばれた話題を登録
+    talkingNow.innerHTML = choseSubject;
+    choseSubjectParentId = 'li-id-of-' + choseSubject;
+    choseSubjectParent = document.getElementById(choseSubjectParentId);
+    choseSubjectParent.parentNode.removeChild(choseSubjectParent);
 }
 
 function finishSubject(){
