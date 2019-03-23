@@ -16,3 +16,9 @@ your-app/
 ```
 
 3. do 'npm init' in a project directory
+
+## how to run your application
+just do it.
+```
+electron main.js
+```
