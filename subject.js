@@ -32,13 +32,7 @@ function addSubject(){
     newSubjectSelectButtonLabel.innerHTML = register.value;
     document.getElementById(newSubjectSelectButtonPlaceId).appendChild(newSubjectSelectButtonLabel);
 
-
-    // ラベルのテキストを挿入
-    //newSubjectSelectButtonLabel.innerHTML = register.value;
-
     // <br> の追加
-    newLineBrake = document.createElement("br");
-    document.getElementById(newSubjectSelectButtonPlaceId).appendChild(newLineBrake);
     register.value = '';
 }
 
@@ -64,6 +58,20 @@ function decideSubject(){
         choseSubjectParent = document.getElementById(choseSubjectParentId);
         choseSubjectParent.parentNode.removeChild(choseSubjectParent);
     }
+
+}
+
+function randamChooseSubject(){
+    existSubjects = new Array();
+    var radioButtons = document.getElementsByTagName("input");
+
+    for (var i=0; i < radioButtons.length; i++) {
+        window.alert(radioButtons[i].value);
+        existSubjects.push(radioButtons[i].value);
+    }
+    window.alert(existSubjects);
+    choseOne = existSubjects[ Math.floor( Math.random() * existSubjects.length ) ];
+    window.alert('選ばれたのは ' + choseOne + ' でした');
 
 }
 
