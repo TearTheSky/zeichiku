@@ -5,15 +5,17 @@ function pressEnterKey(){
 }
 function addSubject(){
     register = document.getElementById('register');
-    talkingNow = document.getElementById('talkingNow');
-    window.alert("お題を登録します：" + register.value);
-
+    if (register.value ==+ ""){
+        return
+    } else {
+        talkingNow = document.getElementById('talkingNow');
+        window.alert("お題を登録します：" + register.value);
+    }
     //<li>タグを追加しここにラジオボタンを入れる
     newSubjectSelectButtonPlace = document.createElement("li");
     newSubjectSelectButtonPlaceId = "li-id-of-" + register.value;
     newSubjectSelectButtonPlace.setAttribute('id', newSubjectSelectButtonPlaceId);
     document.getElementById('subjectList').appendChild(newSubjectSelectButtonPlace);
-
     // <input>タグの追加
     newSubjectSelectButton = document.createElement("input");
     newSubjectSelectButtonId = "button-id-of-" + register.value;
@@ -23,7 +25,6 @@ function addSubject(){
     newSubjectSelectButton.setAttribute('name', 'registeredSubjects');
     newSubjectSelectButton.value = register.value;
     document.getElementById(newSubjectSelectButtonPlaceId).appendChild(newSubjectSelectButton);
-
     // テキストの追加
     newSubjectSelectButtonLabel = document.createElement("label");
     newSubjectSelectButtonLabel.setAttribute('class', 'radio-inline__label');
