@@ -1,5 +1,5 @@
 # 筮竹(Zeichiku) - talk subject random chooser for streamers
-![筮竹](https://raw.githubusercontent.com/wiki/TearTheSky/zeichiku/assets/how_to_use_zeichiku.gif)
+<img src="https://raw.githubusercontent.com/wiki/TearTheSky/zeichiku/assets/how_to_use_zeichiku.gif" width="100">
 
 ## これはなに - What is this ?
 - a simple small Desktop application made of Electron.
