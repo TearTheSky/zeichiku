@@ -2,7 +2,7 @@
 
 ## これはなに - What is this ?
 - a simple small Desktop application made of Electron.
-- this app can choose a subject at randam.
+- this app can choose a subject at random.
 - I think I want streamers to use when he talking or playing some quest on video games.
 
 筮竹はあらかじめ登録した話題の中から任意に選んだりランダムに選んだりするだけのシンプルなElectronアプリです。  
