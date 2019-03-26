@@ -18,8 +18,8 @@ Macは macOS Mojaveで動作確認済みです。
 他のバージョンは不明ですが使えそうです。  
 使えなかったらごめんなさい。  
 
-### Windwos
-- Windowns10 and Windows7 are ok
+### Windows
+- Windows10 and Windows7 are ok
 
 WindwosはWindows10とWindows7で問題なく動作することを確認しています。  
 他のバージョンは分かりません。  
