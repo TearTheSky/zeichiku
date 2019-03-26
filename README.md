@@ -21,6 +21,6 @@ Macは macOS Mojaveで動作確認済みです。
 ### Windows
 - Windows10 and Windows7 are ok
 
-WindwosはWindows10とWindows7で問題なく動作することを確認しています。  
+WindowsはWindows10とWindows7で問題なく動作することを確認しています。  
 他のバージョンは分かりません。  
 動かなかったらごめんなさい。  
